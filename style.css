@@ -1,0 +1,858 @@
+@layer fonts {
+  /* league-spartan-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/league-spartan-v11-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* league-spartan-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/league-spartan-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* league-spartan-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/league-spartan-v11-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* league-spartan-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/league-spartan-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+}
+
+@layer colors {
+  :root {
+    --c-brown: hsl(27, 22%, 51%);
+    --c-black: hsl(0, 0%, 7%);
+    --c-white: hsl(0, 0%, 100%);
+    --c-gray-100: hsl(234, 30%, 13%);
+    --c-gray-300: hsl(218, 21%, 18%);
+    --c-gray-400: hsl(0, 0%, 30%);
+    --c-gray-450: hsla(0, 0%, 30%, 0.5);
+    --c-gray-500: hsl(217, 14%, 42%);
+    --c-gray-700: hsla(0, 0%, 100%, 0.15);
+    --color-background-dark: var(--c-black);
+    --color-background-light: var(--c-white);
+    --color-text-dark: var(--c-black);
+    --color-text-light: var(--c-white);
+    --color-shadow: hsla(234, 30%, 13%, 0.5);
+    --color-hero-bg: hsl(0, 0%, 7%);
+    --color-menu-divider: var(--c-gray-700);
+    --color-image-divider: var(--c-brown);
+    --color-tab-active: var(--c-gray-400);
+    --color-tab-inactive: var(--c-gray-450);
+    --color-tab-line: var(--c-brown);
+  }
+}
+
+@layer typography {
+  :root {
+    --fs-80: calc(80 / 16 * 1rem);
+    --fs-48: calc(48 / 16 * 1rem);
+    --fs-32: calc(32 / 16 * 1rem);
+    --fs-20: calc(20 / 16 * 1rem);
+    --fs-17: calc(17 / 16 * 1rem);
+    --fs-16: calc(16 / 16 * 1rem);
+    --fs-14: calc(14 / 16 * 1rem);
+    --font-size-h1: var(--fs-32);
+    --font-size-h2: var(--fs-32);
+    --font-size-h3: var(--fs-20);
+    --font-size-p: var(--fs-16);
+    --font-size-p-sm: var(--fs-16);
+    --font-size-tab: var(--fs-17);
+    --font-size-booking-h3: var(--fs-32);
+    --font-size-footer: var(--fs-14);
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      --font-size-h1: var(--fs-48);
+      --font-size-h2: var(--fs-48);
+      --font-size-booking-h3: var(--fs-48);
+      --font-size-p: var(--fs-20);
+    }
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      --font-size-h1: var(--fs-80);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    text-align: center;
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      text-align: left;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 300;
+    letter-spacing: -0.0125em;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h3 {
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+    line-height: calc(24 / 20);
+  }
+
+  p {
+    font-size: var(--font-size-p);
+    line-height: 1.5;
+    margin: 0;
+
+    &.small {
+      font-size: var(--font-size-p-sm);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@layer global {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-background-light);
+    color: var(--c-gray-300);
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+  }
+
+  body,
+  section {
+    overflow-x: clip;
+  }
+
+  button {
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hide-on-mobile {
+    @media (width < calc(700 / 16 *1rem)) {
+      display: none;
+    }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .has-shadow {
+    box-shadow: 0 75px 100px -50px var(--color-shadow);
+  }
+
+  .bg-dark {
+    background: var(--color-background-dark);
+    color: var(--color-text-light);
+  }
+}
+
+@layer layout {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 24px 1fr 24px;
+
+    > * {
+      grid-column: 2;
+    }
+
+    > .fullbleed {
+      grid-column: 1 / -1;
+    }
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      grid-template-columns: 1fr min(100% - 80px, 1110px) 1fr;
+    }
+  }
+}
+
+@layer header {
+  .header {
+    .logo {
+      position: absolute;
+      top: 65px;
+
+      @media (width < calc(1100 / 16 * 1rem)) {
+        left: 50%;
+        translate: -50% 0;
+        top: 374px;
+      }
+
+      @media (width < calc(700 / 16 * 1rem)) {
+        width: calc(82.4 / 16 * 1rem);
+        top: 232px;
+      }
+    }
+  }
+}
+
+@layer button {
+  .button {
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    letter-spacing: 0.16em;
+    border: 1.5px solid var(--color-text-light);
+    width: fit-content;
+    padding: 24px 55px;
+    transition: 250ms ease-in-out;
+    transition-property: background, color;
+    margin-inline: auto;
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      margin-inline: 0;
+    }
+
+    &:hover {
+      background: var(--color-text-light);
+      color: var(--color-background-dark);
+    }
+
+    &.solid {
+      background: var(--color-background-dark);
+      color: var(--color-text-light);
+      border: 1px solid var(--color-background-dark);
+
+      &:hover {
+        background: var(--color-background-light);
+        color: var(--color-text-dark);
+      }
+    }
+  }
+}
+
+@layer hero {
+  .hero {
+    display: grid;
+    grid-template-rows: 300px repeat(4, auto);
+    justify-items: center;
+    background-color: var(--color-hero-bg);
+    color: var(--color-text-light);
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      grid-template-rows: 452px repeat(4, auto);
+      padding-block-end: 87px;
+    }
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      grid-template-rows: 258px repeat(4, auto);
+      justify-items: start;
+      padding-block-end: 200px;
+      max-height: calc(820 / 16 * 1rem);
+      overflow: hidden;
+    }
+
+    .image {
+      grid-row: 1 / -1;
+
+      img {
+        @media (width < calc(1100 / 16 * 1rem)) {
+          width: calc(700 / 16 * 1rem);
+        }
+
+        @media (width < calc(700 / 16 * 1rem)) {
+          width: calc(375 / 16 * 1rem);
+        }
+
+        @media (width >= calc(1100 / 16 * 1rem)) {
+          min-height: calc(820 / 16 * 1rem);
+          object-fit: cover;
+        }
+      }
+    }
+
+    .title {
+      margin-block-end: 20px;
+      line-height: 1.3;
+      grid-row: 2;
+      max-width: 12ch;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        line-height: 1;
+      }
+    }
+
+    .description {
+      margin-block-end: 50px;
+      grid-row: 3;
+      max-width: 50ch;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        max-width: 40ch;
+      }
+    }
+
+    .button {
+      grid-row: 4;
+    }
+  }
+}
+
+@layer features {
+  .features {
+    position: relative;
+    margin-block-start: -72px;
+
+    .feature {
+      position: relative;
+      display: grid;
+      justify-items: center;
+      padding-block-end: 100px;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 125px;
+      }
+
+      &:nth-child(2) {
+        @media (width >= calc(1100 / 16 * 1rem)) {
+          padding-block-end: 0;
+        }
+      }
+
+      &:nth-child(2) .feature__pattern {
+        top: auto;
+        right: auto;
+        bottom: -29px;
+        left: 50%;
+        scale: -100% 100%;
+
+        @media (width >= calc(1100 / 16 * 1rem)) {
+          bottom: 0;
+          right: -166px;
+          left: auto;
+        }
+      }
+
+      &:nth-child(2) picture {
+        @media (width >= calc(1100 / 16 * 1rem)) {
+          order: 2;
+          margin-block-end: -80px;
+        }
+      }
+    }
+
+    .feature__pattern {
+      position: absolute;
+      max-width: none;
+      top: 184px;
+      right: 50%;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        right: 38%;
+        top: 313px;
+      }
+    }
+
+    .feature__image {
+      margin-block-end: 48px;
+
+      @media (width >= calc(700 / 16 * 1rem)) {
+        max-width: calc(573 / 16 * 1rem);
+      }
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        max-width: calc(540 / 16 * 1rem);
+        margin-block-end: 0;
+      }
+    }
+
+    .feature__lines {
+      position: absolute;
+      top: 258px;
+      right: 0;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        right: -114px;
+      }
+    }
+
+    .feature__text {
+      @media (width < calc(1100 / 16 * 1rem)) {
+        display: grid;
+        justify-items: center;
+      }
+    }
+
+    .feature__divider {
+      margin-block-end: 36px;
+    }
+
+    .feature__title {
+      margin-block-end: 13px;
+      max-width: 14ch;
+    }
+
+    .feature__description {
+      max-width: 40ch;
+    }
+  }
+}
+
+@layer highlights {
+  .highlights {
+    padding-block: 72px;
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      padding-block: 100px;
+      padding-inline: 60px;
+    }
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      padding-block-start: 200px;
+      padding-inline: 0;
+    }
+
+    .highlights__content {
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .highlights__text {
+      @media (width < calc(1100 / 16 * 1rem)) {
+        display: grid;
+        justify-items: center;
+      }
+
+      .highlights__divider {
+        margin-block-end: 36px;
+
+        @media (width >= calc(1100 / 16 * 1rem)) {
+          margin-block-end: 55px;
+        }
+      }
+
+      h2 {
+        max-width: 18ch;
+        margin-block-end: 13px;
+
+        @media (width >= calc(700 / 16 * 1rem)) {
+          margin-block-end: 27px;
+        }
+      }
+
+      p {
+        max-width: 40ch;
+        margin-block-end: 85px;
+      }
+    }
+
+    .highlights__items {
+      display: grid;
+      gap: 24px;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        padding-block-start: 48px;
+      }
+    }
+
+    .highlights__item {
+      @media (width >= calc(700 / 16 * 1rem)) {
+        display: grid;
+        grid-template-columns: calc(128 / 16 * 1rem) 62px 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+          'image line headline'
+          'image . description';
+      }
+
+      &:not(:last-child) {
+        padding-block-end: 56px;
+        border-block-end: 2px solid var(--color-menu-divider);
+
+        @media (width >= calc(700 / 16 * 1rem)) {
+          padding-block-end: 24px;
+        }
+      }
+
+      > * {
+        @media (width >= calc(700 / 16 * 1rem)) {
+          text-align: left;
+        }
+      }
+
+      p {
+        grid-area: description;
+
+        @media (width < calc(700 / 16 * 1rem)) {
+          margin-inline: auto;
+          max-width: 28ch;
+        }
+
+        @media (width >= calc(700 / 16 * 1rem)) {
+          max-width: 40ch;
+        }
+      }
+    }
+
+    .highlights__item-image {
+      grid-area: image;
+
+      img {
+        @media (width < calc(700 / 16 * 1rem)) {
+          margin-block-end: 36px;
+        }
+      }
+    }
+
+    .highlights__item-divider {
+      position: relative;
+      top: 10px;
+      width: 32px;
+      height: 1px;
+      background: var(--color-image-divider);
+    }
+
+    h3 {
+      grid-area: headline;
+      margin-block-end: 6px;
+    }
+  }
+}
+
+@layer booking {
+  .booking {
+    position: relative;
+    padding-block: 100px;
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      padding-block: 120px;
+    }
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      padding-block: 160px;
+    }
+
+    .booking__pattern,
+    .booking__lines {
+      position: absolute;
+    }
+
+    .booking__pattern {
+      max-width: none;
+      right: 54%;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        right: 67%;
+      }
+    }
+
+    .booking__lines {
+      top: 82px;
+      right: 77%;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        top: 130px;
+        right: 90%;
+      }
+    }
+
+    .booking__tabs {
+      position: absolute;
+      z-index: 1;
+      display: grid;
+      gap: 16px;
+      justify-items: center;
+      width: 100%;
+      /* position based on image's width * aspect ratio */
+      top: calc((100vw - 48px) / 0.815 + 100px + 40px);
+
+      @media (width >= calc(700 / 16 * 1rem)) {
+        grid-auto-flow: column;
+        top: 535px;
+        gap: 0;
+      }
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        grid-auto-flow: row;
+        justify-items: start;
+        grid-column: 2;
+        left: 665px;
+        top: auto;
+        bottom: 180px;
+      }
+
+      @media (width >= calc(1200 / 16 * 1rem)) {
+        bottom: 260px;
+      }
+    }
+
+    .booking__tab {
+      background: none;
+      border: none;
+      font-size: var(--font-size-tab);
+      font-weight: 600;
+      line-height: 1.6;
+      letter-spacing: 0.147em;
+      text-transform: uppercase;
+      color: var(--color-tab-inactive);
+      transition: color 250ms ease-in-out;
+
+      &[aria-selected='true'] {
+        color: var(--color-tab-active);
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 48px;
+        height: 1px;
+        background: var(--color-tab-line);
+        opacity: 0;
+        position: relative;
+        top: 28px;
+        margin-inline: auto;
+
+        @media (width >= calc(700 / 16 * 1rem)) {
+          top: 36px;
+        }
+
+        @media (width >= calc(1100 / 16 * 1rem)) {
+          width: 95px;
+          top: 11px;
+          left: -32px;
+          margin: 0;
+          translate: -100% 0;
+        }
+      }
+    }
+
+    .booking__tabpanel {
+      position: relative;
+    }
+
+    .booking__tabcontent {
+      display: grid;
+      row-gap: calc(200 / 16 * 1rem);
+
+      @media (width >= calc(700 / 16 * 1rem)) {
+        row-gap: calc(140 / 16 * 1rem);
+        justify-items: center;
+      }
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        column-gap: 125px;
+      }
+    }
+
+    .booking__picture {
+    }
+
+    .booking__image {
+      @media (width >= calc(700 / 16 * 1rem)) {
+        max-width: calc(573 / 16 * 1rem);
+      }
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        max-width: calc(540 / 16 * 1rem);
+      }
+    }
+
+    .booking__text {
+      display: grid;
+      justify-items: center;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        padding-block-start: 60px;
+        justify-items: start;
+      }
+
+      h3 {
+        font-size: var(--font-size-booking-h3);
+        margin-block-end: 13px;
+      }
+
+      p {
+        margin-block-end: 27px;
+        max-width: 42ch;
+
+        @media (width >= calc(700 / 16 * 1rem)) {
+          margin-block-end: 60px;
+        }
+      }
+    }
+  }
+}
+
+@layer cta {
+  .cta {
+    min-height: 240px;
+    align-items: center;
+
+    @media (width < calc(1100 / 16 * 1rem)) {
+      place-items: center;
+    }
+
+    .cta__picture,
+    .cta__text {
+      grid-row: 1;
+    }
+
+    .cta__picture {
+      height: 100%;
+    }
+
+    .cta__image {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cta__text {
+      display: grid;
+      gap: 20px;
+
+      @media (width >= calc(700 / 16 * 1rem)) {
+        gap: 24px;
+      }
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        grid-template-columns: repeat(2, auto);
+        justify-items: start;
+        align-items: center;
+      }
+
+      .button {
+        @media (width >= calc(1100 / 16 * 1rem)) {
+          justify-self: end;
+        }
+      }
+    }
+  }
+}
+
+@layer footer {
+  .footer {
+    display: grid;
+    padding-block: 80px;
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      padding-block: 60px;
+    }
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      padding-block: 80px;
+    }
+
+    p,
+    a {
+      font-size: var(--font-size-footer);
+      line-height: 2;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-text-light);
+
+      @media (width >= calc(700 / 16 * 1rem)) {
+        text-align: left;
+      }
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer__content {
+      @media (width >= calc(700 / 16 * 1rem)) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+          'logo location'
+          '. times';
+      }
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 'logo location times';
+      }
+
+      > * {
+        @media (width >= calc(700 / 16 * 1rem)) {
+          justify-self: start;
+        }
+      }
+    }
+
+    .footer__link {
+    }
+
+    .logo {
+      margin-block-end: 42px;
+      grid-area: logo;
+
+      @media (width < calc(700 / 16 * 1rem)) {
+        margin-inline: auto;
+      }
+    }
+
+    .footer__location {
+      margin-block-end: 32px;
+      grid-area: location;
+
+      @media (width < calc(700 / 16 * 1rem)) {
+        text-align: center;
+      }
+    }
+
+    .footer__times {
+      grid-area: times;
+    }
+  }
+}
