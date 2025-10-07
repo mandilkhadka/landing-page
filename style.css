@@ -342,7 +342,7 @@
 @layer features {
   .features {
     position: relative;
-    margin-block-start: -72px;
+    /* margin-block-start: -72px; */
 
     .feature {
       position: relative;
@@ -760,6 +760,7 @@
     .cta__text {
       display: grid;
       gap: 20px;
+      color: rgb(255, 255, 255);
 
       @media (width >= calc(700 / 16 * 1rem)) {
         gap: 24px;
@@ -862,7 +863,7 @@
 /**********Maps button SECTION**********/
 
 @layer button {
-  .maps-button {
+  .visible-button {
     display: inline-block;
     font-weight: 600;
     text-transform: uppercase;
@@ -874,7 +875,7 @@
     transition: 250ms ease-in-out;
     transition-property: background, color;
     margin-inline: auto;
-    margin-top: 10px;
+    margin: 2px 0px 10px 0px;
 
     @media (width >= calc(1100 / 16 * 1rem)) {
       margin-inline: 0;
@@ -903,6 +904,11 @@
   font-weight: 700;
 }
 
+
+      .bordered_text {
+          -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+      }
 /**********START PRODUCT SECTION**********/
 .heading {
     text-align: center;
