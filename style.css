@@ -248,6 +248,7 @@
     transition: 250ms ease-in-out;
     transition-property: background, color;
     margin-inline: auto;
+    margin-bottom: 10px;
 
     @media (width >= calc(1100 / 16 * 1rem)) {
       margin-inline: 0;
@@ -568,9 +569,12 @@
   .booking {
     position: relative;
     padding-block: 100px;
+    padding-block-end: 10px;
 
     @media (width >= calc(700 / 16 * 1rem)) {
       padding-block: 120px;
+    padding-block-end: 10px;
+
     }
 
     @media (width >= calc(1100 / 16 * 1rem)) {
