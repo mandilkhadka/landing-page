@@ -909,6 +909,121 @@
           -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
       }
+
+    /* multiple images */
+/* container  */
+
+.carousel {
+  width: 100%;
+  overflow-x: auto;
+  margin: 3em auto;
+  display: flex;
+  gap: 1em;
+  scroll-behavior: smooth;
+  anchor-name: --carousel;
+  scroll-snap-type: x mandatory;
+  scroll-marker-group: after;
+}
+
+.carousel::scroll-marker-group {
+  display: flex;
+  justify-content: center;
+  gap: .5em;
+}
+
+.card::scroll-marker {
+  content: '';
+  height: 1em;
+  width: 1em;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.card::scroll-marker:target-current {
+  background-color: black;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel::scroll-button(right), .carousel::scroll-button(left) {
+  content: "→";
+  border: none;
+  background-color: rgb(0, 0, 0);
+  font-family: Consolas;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding-bottom: .1em;
+  cursor: pointer;
+  position: fixed;
+  position-anchor: --carousel;
+  position-area: right center;
+  translate: -100%;
+}
+
+.carousel::scroll-button(left) {
+  content: "←";
+  position-area: left center;
+  translate: 100%;
+}
+
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.card {
+  scroll-snap-align: start;
+  flex: 0 0 20em;
+  aspect-ratio: 5 / 2;
+  background-color: rgb(164, 164, 184);
+  padding: 1em;
+  border-radius: .5em;
+  text-align: center;
+  align-content: center;
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex: 0 0 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**********START PRODUCT SECTION**********/
 .heading {
     text-align: center;
