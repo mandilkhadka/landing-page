@@ -349,7 +349,7 @@
       position: relative;
       display: grid;
       justify-items: center;
-      padding-block-end: 100px;
+      /* padding-block-end: 50px; */
 
       @media (width >= calc(1100 / 16 * 1rem)) {
         grid-template-columns: repeat(2, 1fr);
