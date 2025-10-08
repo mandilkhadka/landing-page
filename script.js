@@ -56,3 +56,17 @@ function changeTabs(e) {
   // Show the selected panel
   tabGroup.querySelector(`#${targetTab.getAttribute('aria-controls')}`).removeAttribute('hidden');
 }
+
+// scroll function
+function scrollImages(button, direction) {
+  // Find the nearest .image-scroll-horizontal section
+  const container = button.closest('.image-scroll-horizontal').querySelector('.image-row');
+  const scrollAmount = container.clientWidth * 0.8;
+
+  if (direction === 'left') {
+    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else {
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+}
+

@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- website icon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <!-- css -->
     <link rel="stylesheet" href="/style.css" />
-<!--  Font Awesome for the map icon -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
+    <!--  Font Awesome for the map icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <title>Shaily-Group</title>
     <script src="/script.js" defer></script>
   </head>
@@ -18,116 +16,131 @@
     <header class="wrapper header">
       <h2 class="visually-hidden">Header</h2>
       <a href="/">
-        <img class="logo" src="/images/logo.svg" alt="Shaily" width="260" height="50" />
+      <img class="logo" src="/images/logo.svg" alt="Shaily" width="260" height="50" />
       </a>
     </header>
     <main>
       <section class="wrapper hero">
         <picture class="image fullbleed">
-
- <!-- <source
-    media="(width >= calc(1100 / 16 * 1rem))"
-    srcset="/images/homepage/hero-bg-desktop.jpg"
-    width="1440"
-    height="820"
-  /> -->
-  <source
-    media="(width >= calc(1100 / 16 * 1rem))"
-    srcset="/images/homepage/hero-bg-desktop@2x.jpg"
-    width="2880"
-    height="1640"
-  />
-  <source
-    media="(width >= calc(700 / 16 * 1rem))"
-    srcset="/images/homepage/hero-bg-tablet.jpg"
-    width="768"
-    height="992"
-  />
-  <source
-    media="(width >= calc(700 / 16 * 1rem))"
-    srcset="/images/homepage/hero-bg-tablet@2x.jpg"
-    width="1536"
-    height="1984"
-  />
-  <source
-    media="(width < calc(700 / 16 * 1rem))"
-    srcset="/images/homepage/hero-bg-mobile.jpg"
-    width="375"
-    height="748"
-  />
-  <img
-    src="/images/homepage/hero-bg-mobile@2x.jpg"
-    alt="plate with shrimp scampi spaghetti"
-    width="750"
-    height="1496"
-  />
+          <!-- <source
+            media="(width >= calc(1100 / 16 * 1rem))"
+            srcset="/images/homepage/hero-bg-desktop.jpg"
+            width="1440"
+            height="820"
+            /> -->
+          <source
+            media="(width >= calc(1100 / 16 * 1rem))"
+            srcset="/images/homepage/hero-bg-desktop@2x.jpg"
+            width="2880"
+            height="1640"
+            />
+          <source
+            media="(width >= calc(700 / 16 * 1rem))"
+            srcset="/images/homepage/hero-bg-tablet.jpg"
+            width="768"
+            height="992"
+            />
+          <source
+            media="(width >= calc(700 / 16 * 1rem))"
+            srcset="/images/homepage/hero-bg-tablet@2x.jpg"
+            width="1536"
+            height="1984"
+            />
+          <source
+            media="(width < calc(700 / 16 * 1rem))"
+            srcset="/images/homepage/hero-bg-mobile.jpg"
+            width="375"
+            height="748"
+            />
+          <img
+            src="/images/homepage/hero-bg-mobile@2x.jpg"
+            alt="plate with shrimp scampi spaghetti"
+            width="750"
+            height="1496"
+            />
         </picture>
-
         <h1 class="title">Shaily-Group</h1>
         <p class="description">Discover the true taste of South Asia with every bite. From aromatic curries to flavorful stir-fries, our kitchens celebrate the heart of Nepali and Indian home cooking.</p>
         <a href="tel: 08074309270" class="button">
-          <i class="fas fa-phone"></i>
-          Contact Us</a>
+        <i class="fas fa-phone"></i>
+        Contact Us</a>
       </section>
       <section class="wrapper features">
         <div class="feature">
-          <img class="feature__pattern hide-on-mobile" src="/images/patterns/pattern-curve-top-right.svg" alt="" width="895" height="320" />
-
-          <picture>
-            <source media="(width >= calc(1100 / 16 * 1rem))" srcset="/images/homepage/enjoyable-place-desktop@2x.jpg" width="1080" height="1440" />
-            <source media="(width >= calc(700 / 16 * 1rem))" srcset="/images/homepage/enjoyable-place-tablet@2x.jpg" width="1146" height="720" />
-            <img class="feature__image has-shadow" src="/images/homepage/enjoyable-place-mobile@2x.jpg" alt="landscape with sheep" width="654" height="800" />
-          </picture>
-
+          <!-- <img class="feature__pattern hide-on-mobile" src="/images/patterns/pattern-curve-top-right.svg" alt="" width="895" height="320" /> -->
+          <!-- ✅ Horizontal Scroll Section 1 -->
+          <div class="image-scroll-horizontal">
+            <button class="scroll-btn left" onclick="scrollImages(this, 'left')">‹</button>
+            <div class="image-row">
+              <picture>
+                <source media="(min-width: 1100px)" srcset="/images/homepage/enjoyable-place-desktop@2x.jpg" />
+                <source media="(min-width: 700px)" srcset="/images/homepage/enjoyable-place-tablet@2x.jpg" />
+                <img class="feature__image has-shadow" src="/images/homepage/enjoyable-place-mobile@2x.jpg" alt="landscape with sheep" />
+              </picture>
+              <picture>
+                <source media="(min-width: 1100px)" srcset="/images/homepage/locally-sourced-desktop@2x.jpg" />
+                <source media="(min-width: 700px)" srcset="/images/homepage/locally-sourced-tablet@2x.jpg" />
+                <img class="feature__image has-shadow" src="/images/homepage/locally-sourced-mobile@2x.jpg" alt="food" />
+              </picture>
+            </div>
+            <button class="scroll-btn right" onclick="scrollImages(this, 'right')">›</button>
+          </div>
           <div class="feature__text">
             <img class="feature__divider" src="/images/patterns/pattern-divide.svg" alt="" width="71" height="7" />
-
             <h2 class="feature__title">Shaily(シャイリーダイニング)</h2>
-
             <p class="feature__description">Discover a hidden gem that brings together the bold, authentic flavors of Nepal and the vibrant spices of Indo-Chinese cuisine — all under one roof. From aromatic curries and crispy samosas to flavorful fried rice and tender chicken tikka, every dish is crafted with care and tradition.
-            <br>
-            Whether you’re craving the comforting taste of home or exploring South Asian flavors for the first time, our restaurant offers a truly unique dining experience in Japan — one that surprises and delights with every bite.</p>
+              <br>
+              Whether you’re craving the comforting taste of home or exploring South Asian flavors for the first time, our restaurant offers a truly unique dining experience in Japan — one that surprises and delights with every bite.
+            </p>
             <p class="feature__description"><strong>住所: 升本ビル 5F, 7 Chome-6-1 Nishikamata, Ota City, Tokyo 144-0051</strong></p>
             <!-- call button  -->
             <a href="tel:0366925211" class="visible-button">
-              <i class="fas fa-phone"></i> 03-6692-5211
+            <i class="fas fa-phone"></i> 03-6692-5211
             </a>
             <!-- Google Maps Button -->
             <a href="https://maps.app.goo.gl/8dng3WzrJWczE9Ee8" target="_blank" class="visible-button">
-              <i class="fas fa-map-marker icon-google"></i> Open in Google Maps
+            <i class="fas fa-map-marker icon-google"></i> Open in Google Maps
             </a>
           </div>
         </div>
         <div class="feature">
-          <img class="feature__pattern hide-on-mobile" src="/images/patterns/pattern-curve-top-right.svg" alt="" width="895" height="320" />
-
-          <picture>
-            <source media="(width >= calc(1100 / 16 * 1rem))" srcset="/images/homepage/locally-sourced-desktop@2x.jpg" width="1080" height="1440" />
-            <source media="(width >= calc(700 / 16 * 1rem))" srcset="/images/homepage/locally-sourced-tablet@2x.jpg" width="1146" height="720" />
-            <img class="feature__image has-shadow" src="/images/homepage/locally-sourced-mobile@2x.jpg" alt="hand with spoon over a plate of food" width="654" height="800" />
-          </picture>
-
-          <img class="feature__lines hide-on-mobile" src="/images/patterns/pattern-lines.svg" alt="" width="160" height="76" />
-
+          <!-- <img class="feature__pattern hide-on-mobile" src="/images/patterns/pattern-curve-top-right.svg" alt="" width="895" height="320" /> -->
+          <!-- ✅ Horizontal Scroll Section 1 -->
+          <div class="image-scroll-horizontal">
+            <button class="scroll-btn left" onclick="scrollImages(this, 'left')">‹</button>
+            <div class="image-row">
+              <picture>
+                <source media="(min-width: 1100px)" srcset="/images/homepage/enjoyable-place-desktop@2x.jpg" />
+                <source media="(min-width: 700px)" srcset="/images/homepage/enjoyable-place-tablet@2x.jpg" />
+                <img class="feature__image has-shadow" src="/images/homepage/enjoyable-place-mobile@2x.jpg" alt="landscape with sheep" />
+              </picture>
+              <picture>
+                <source media="(min-width: 1100px)" srcset="/images/homepage/locally-sourced-desktop@2x.jpg" />
+                <source media="(min-width: 700px)" srcset="/images/homepage/locally-sourced-tablet@2x.jpg" />
+                <img class="feature__image has-shadow" src="/images/homepage/locally-sourced-mobile@2x.jpg" alt="food" />
+              </picture>
+            </div>
+            <button class="scroll-btn right" onclick="scrollImages(this, 'right')">›</button>
+          </div>
+          <!-- <img class="feature__lines hide-on-mobile" src="/images/patterns/pattern-lines.svg" alt="" width="160" height="76" /> -->
           <div class="feature__text">
             <img class="feature__divider" src="/images/patterns/pattern-divide.svg" alt="" width="71" height="7" />
-
             <h2 class="feature__title">Shanti(シャンティースープカリー)</h2>
             <p class="feature__description">
               SHANTi was born in its hometown of Sapporo, Hokkaido, and has been loved by everyone as a popular soup curry restaurant in Harajuku, Shibuya, Ikebukuro, and Takadanobaba.<br>
-              A soup curry that can't be imitated anywhere else, with a mixture of over 20 types of spices, a healthy soup with a highly medicinal effect, back fat added to give it a rich and rich flavor, and the simmered chicken melts in your mouth. Please try it at your local SHANTi.</p>
-              <p class="feature__description"><strong>住所: ハクホウ渋谷第１ビル, 地下１階, 2 Chome-7-4 Dogenzaka, Shibuya, Tokyo 150-0043</strong></p>
-              <a href="tel:0364160375" class="visible-button">
-                <i class="fas fa-phone"></i> 03-6416-0375
+              A soup curry that can't be imitated anywhere else, with a mixture of over 20 types of spices, a healthy soup with a highly medicinal effect, back fat added to give it a rich and rich flavor, and the simmered chicken melts in your mouth. Please try it at your local SHANTi.
+            </p>
+            <p class="feature__description"><strong>住所: ハクホウ渋谷第１ビル, 地下１階, 2 Chome-7-4 Dogenzaka, Shibuya, Tokyo 150-0043</strong></p>
+            <a href="tel:0364160375" class="visible-button">
+            <i class="fas fa-phone"></i> 03-6416-0375
             </a>
-                          <!-- Google Maps Button -->
-              <a href="https://maps.app.goo.gl/UtTxRaKj2EnJ4BA77" target="_blank" class="visible-button">
-                <i class="fas fa-map-marker icon-google"></i> Open in Google Maps
-              </a>
+            <!-- Google Maps Button -->
+            <a href="https://maps.app.goo.gl/UtTxRaKj2EnJ4BA77" target="_blank" class="visible-button">
+            <i class="fas fa-map-marker icon-google"></i> Open in Google Maps
+            </a>
           </div>
         </div>
       </section>
-
       <section class="wrapper highlights bg-dark">
         <div class="highlights__content">
           <div class="highlights__text">
@@ -175,18 +188,14 @@
           </div>
         </div>
       </section>
-
       <section class="wrapper booking">
         <h2 class="visually-hidden">Booking</h2>
-
         <img class="booking__pattern hide-on-mobile" src="/images/patterns/pattern-curve-top-right.svg" alt="" width="895" height="320" />
-
         <div class="booking__tabs fullbleed" role="tablist" aria-label="Sample Tabs">
           <button class="booking__tab" role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">Family Gathering</button>
           <button class="booking__tab" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">Special Events</button>
           <button class="booking__tab" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">Social Events</button>
         </div>
-
         <div class="booking__tabpanel" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
           <div class="booking__tabcontent">
             <picture class="booking__picture">
@@ -201,7 +210,6 @@
             </div>
           </div>
         </div>
-
         <div class="booking__tabpanel" id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
           <div class="booking__tabcontent">
             <picture class="booking__picture">
@@ -216,7 +224,6 @@
             </div>
           </div>
         </div>
-
         <div class="booking__tabpanel" id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
           <div class="booking__tabcontent">
             <picture class="booking__picture">
@@ -231,10 +238,8 @@
             </div>
           </div>
         </div>
-
         <img class="booking__lines hide-on-mobile" src="/images/patterns/pattern-lines.svg" alt="" width="160" height="76" />
       </section>
-
       <section class="wrapper cta bg-dark">
         <picture class="cta__picture fullbleed">
           <source media="(width >= calc(1100 / 16 * 1rem))" srcset="/images/homepage/ready-bg-desktop@2x.jpg" width="2880" height="480" />
@@ -245,25 +250,22 @@
           <h2 class="bordered_text">Ready to make a reservation?</h2>
           <a href="tel: 08074309270" class="button solid">
           <i class="fas fa-phone"></i>
-            Contact Us</a>
+          Contact Us</a>
         </div>
       </section>
     </main>
     <footer class="wrapper footer bg-dark">
       <h2 class="visually-hidden">Footer</h2>
-
       <div class="footer__content">
         <a class="footer__link" href="/">
-          <img class="logo" src="/images/logo.svg" alt="Dine Home" width="103" height="40" />
+        <img class="logo" src="/images/logo.svg" alt="Dine Home" width="103" height="40" />
         </a>
-
         <div class="footer__location">
           <p class="footer-title">Shaily Dining (Kamata)</p>
           <a href="tel:0366925211">03-6692-5211</a></br>
           <p class="footer-title">Shanti Soup Curry (Shibuya)</p>
           <a href="tel:0364160375">03-6416-0375</a>
         </div>
-
         <div class="footer__times">
           <p class="footer-title">Open Times Mon - Sun:</p>
           <p> Lunch: 11:00 AM - 15:00 PM</p>
@@ -272,11 +274,10 @@
         </div>
       </div>
     </footer>
-
-    <!--
-
+  </body>
+</html>
 <!----------PRODUCT HTML STARTS----->
-<div class="container">
+<!-- <div class="container">
   <h2 class="heading">Most Ordered <span>Food Menu</span></h2>
   <p class="subhead">Top Picks from Our Customers..</p>
 
@@ -330,14 +331,5 @@
       <p><b>$19.99</b> <strike>$10.99</strike> </p>
       <a href="#">Order Now</a> </div>
       </div>
-
-</div>
+  </div> -->
 <!----------PRODUCT HTML ENDS----->
-<div class="carousel">
-  <div class="card">
-    <img src="/images/homepage/locally-sourced-mobile@2x.jpg" alt="" />
-  </div>
-</div>
-
-  </body>
-</html>

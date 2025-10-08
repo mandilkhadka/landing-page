@@ -913,119 +913,98 @@
     /* multiple images */
 /* container  */
 
-.carousel {
+.image-scroll-horizontal {
+  position: relative;
   width: 100%;
-  overflow-x: auto;
-  margin: 3em auto;
+  overflow: hidden;
+  margin: auto;
   display: flex;
-  gap: 1em;
-  scroll-behavior: smooth;
-  anchor-name: --carousel;
-  scroll-snap-type: x mandatory;
-  scroll-marker-group: after;
-}
-
-.carousel::scroll-marker-group {
-  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: .5em;
+  padding: 2rem 0;
 }
 
-.card::scroll-marker {
-  content: '';
-  height: 1em;
-  width: 1em;
-  background-color: blue;
-  border-radius: 50%;
+.image-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  width: 100%;
 }
 
-.card::scroll-marker:target-current {
-  background-color: black;
+.image-row picture {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  width: 90vw; /* responsive full-width images */
+  max-width: 500px;
+  height: auto;
+  position: relative;
 }
 
-.carousel::-webkit-scrollbar {
+.feature__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.image-row::-webkit-scrollbar {
   display: none;
 }
 
-.carousel::scroll-button(right), .carousel::scroll-button(left) {
-  content: "→";
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
   border: none;
-  background-color: rgb(0, 0, 0);
-  font-family: Consolas;
-  font-size: 3rem;
-  color: rgb(255, 255, 255);
-  height: 60px;
-  width: 60px;
   border-radius: 50%;
-  padding-bottom: .1em;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
   cursor: pointer;
-  position: fixed;
-  position-anchor: --carousel;
-  position-area: right center;
-  translate: -100%;
+  transition: background 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 5;
 }
 
-.carousel::scroll-button(left) {
-  content: "←";
-  position-area: left center;
-  translate: 100%;
+.scroll-btn:hover {
+  background: #f0f0f0;
 }
 
-.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
-  opacity: 0.5;
-  cursor: auto;
+.scroll-btn.left {
+  left: 10px;
 }
 
-.card {
-  scroll-snap-align: start;
-  flex: 0 0 20em;
-  aspect-ratio: 5 / 2;
-  background-color: rgb(164, 164, 184);
-  padding: 1em;
-  border-radius: .5em;
-  text-align: center;
-  align-content: center;
+.scroll-btn.right {
+  right: 10px;
 }
 
-@media (max-width: 500px) {
-  .card {
-    flex: 0 0 100%;
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .image-row picture {
+    width: 100vw;
+    border-radius: 1rem;
+  }
+
+  .scroll-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**********START PRODUCT SECTION**********/
-.heading {
+/* .heading {
     text-align: center;
     font-size:32px;
     padding: 0px;
@@ -1077,5 +1056,5 @@
 	width:200px;
 	margin:0px auto;
     margin-top: 20px;
-}
+} */
 /**********END PRODUCT SECTION**********/
