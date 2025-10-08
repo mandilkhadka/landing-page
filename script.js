@@ -124,12 +124,12 @@ function scrollImages(button, direction) {
     const btn = document.getElementById('lang-toggle');
     if (btn) {
       // always show toggle as "EN / 日本語" initially
-      btn.innerHTML = '日本語 / EN';
+      btn.innerHTML = 'EN / 日本語';
 
       btn.addEventListener('click', function () {
         toggleLanguage();
         // Update button label to reflect current language
-        btn.innerHTML = currentLang === 'en' ? '日本語 / EN' : 'EN / 日本語';
+        btn.innerHTML = currentLang === 'en' ?  'EN / 日本語' : '日本語 / EN';
       });
     }
   });

@@ -1016,7 +1016,7 @@
   position: fixed;
   top: 20px;
   right: 28px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   border: 1.8px solid rgba(255, 255, 255, 0.4);
   padding: 8px 18px;
