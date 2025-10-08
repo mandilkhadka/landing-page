@@ -70,3 +70,67 @@ function scrollImages(button, direction) {
   }
 }
 
+
+// Language toggle script (reads data-en / data-ja and data-aria-en / data-aria-ja)
+(function () {
+  let currentLang = 'en';
+
+  // helper: set element content (preserve icons with innerHTML)
+  function setElementLang(el, lang) {
+    const htmlAttr = 'data-' + lang;
+    if (el.hasAttribute(htmlAttr)) {
+      el.innerHTML = el.getAttribute(htmlAttr);
+    }
+  }
+
+  // update aria attributes if present
+  function setAriaLang(el, lang) {
+    const ariaAttr = 'data-aria-' + lang;
+    if (el.hasAttribute(ariaAttr) && el.hasAttribute('aria-label')) {
+      el.setAttribute('aria-label', el.getAttribute(ariaAttr));
+    }
+  }
+
+  // initialize page language
+  function initializeLanguage() {
+    document.documentElement.lang = currentLang;
+
+    const titleEl = document.querySelector('title');
+    if (titleEl && titleEl.hasAttribute('data-en')) {
+      titleEl.textContent = titleEl.getAttribute('data-en');
+    }
+
+    document.querySelectorAll('[data-en]').forEach(el => setElementLang(el, 'en'));
+    document.querySelectorAll('[data-aria-en]').forEach(el => setAriaLang(el, 'en'));
+  }
+
+  // toggle language
+  function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'ja' : 'en';
+    document.documentElement.lang = currentLang;
+
+    const titleEl = document.querySelector('title');
+    if (titleEl && titleEl.hasAttribute('data-' + currentLang)) {
+      titleEl.textContent = titleEl.getAttribute('data-' + currentLang);
+    }
+
+    document.querySelectorAll('[data-en]').forEach(el => setElementLang(el, currentLang));
+    document.querySelectorAll('[data-aria-en]').forEach(el => setAriaLang(el, currentLang));
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initializeLanguage();
+
+    const btn = document.getElementById('lang-toggle');
+    if (btn) {
+      // always show toggle as "EN / 日本語" initially
+      btn.innerHTML = '日本語 / EN';
+
+      btn.addEventListener('click', function () {
+        toggleLanguage();
+        // Update button label to reflect current language
+        btn.innerHTML = currentLang === 'en' ? '日本語 / EN' : 'EN / 日本語';
+      });
+    }
+  });
+})();

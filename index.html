@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="/style.css" />
     <!--  Font Awesome for the map icon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <title>Shaily-Group</title>
+    <title data-en="Shaily-Group" data-ja="シャイリーグループ">Shaily-Group</title>
     <script src="/script.js" defer></script>
   </head>
   <body>
     <header class="wrapper header">
-      <h2 class="visually-hidden">Header</h2>
+      <h2 class="visually-hidden" data-en="Header" data-ja="ヘッダー">Header</h2>
       <a href="/">
       <img class="logo" src="/images/logo.svg" alt="Shaily" width="260" height="50" />
       </a>
     </header>
     <main>
+
       <section class="wrapper hero">
         <picture class="image fullbleed">
           <!-- <source
@@ -59,18 +60,33 @@
             height="1984"
             />
         </picture>
-        <h1 class="title">Shaily-Group</h1>
-        <p class="description">Discover the true taste of South Asia with every bite. From aromatic curries to flavorful stir-fries, our kitchens celebrate the heart of Nepali and Indian home cooking.</p>
-        <a href="tel: 08074309270" class="button">
+        <h1 class="title"
+            data-en="Shaily-Group"
+            data-ja="シャイリーグループ">Shaily-Group</h1>
+        <p class="description"
+           data-en="Discover the true taste of South Asia with every bite. From aromatic curries to flavorful stir-fries, our kitchens celebrate the heart of Nepali and Indian home cooking."
+           data-ja="一口ごとに南アジアの本格的な味をお届けします。香り豊かなカレーから風味豊かな炒め物まで、ネパールやインドの家庭料理の魅力を大切にしています。">Discover the true taste of South Asia with every bite. From aromatic curries to flavorful stir-fries, our kitchens celebrate the heart of Nepali and Indian home cooking.</p>
+        <a href="tel: 08074309270" class="button"
+           data-en='<i class="fas fa-phone"></i> Contact Us'
+           data-ja='<i class="fas fa-phone"></i> お問い合わせ'>
         <i class="fas fa-phone"></i>
         Contact Us</a>
       </section>
+
+      <button id="lang-toggle" class="lang-btn"
+              data-en="EN / 日本語"
+              data-ja="日本語 / EN">日本語 / EN</button>
       <section class="wrapper features">
+
+
+
         <div class="feature">
           <!-- <img class="feature__pattern hide-on-mobile" src="/images/patterns/pattern-curve-top-right.svg" alt="" width="895" height="320" /> -->
           <!-- ✅ Horizontal Scroll Section 1 -->
           <div class="image-scroll-horizontal">
-            <button class="scroll-btn left" onclick="scrollImages(this, 'left')">‹</button>
+            <button class="scroll-btn left" onclick="scrollImages(this, 'left')"
+                    data-en="‹"
+                    data-ja="‹">‹</button>
             <div class="image-row">
               <picture>
                 <source media="(min-width: 1100px)" srcset="/images/homepage/restaurants/shaili-one-desktop@2x.jpg" />
@@ -93,22 +109,32 @@
                 <img class="feature__image has-shadow" src="/images/homepage/restaurants/shaili-four-mobile@2x.jpg" alt="food" />
               </picture>
             </div>
-            <button class="scroll-btn right" onclick="scrollImages(this, 'right')">›</button>
+            <button class="scroll-btn right" onclick="scrollImages(this, 'right')"
+                    data-en="›"
+                    data-ja="›">›</button>
           </div>
           <div class="feature__text">
             <img class="feature__divider" src="/images/patterns/pattern-divide.svg" alt="" width="71" height="7" />
-            <h2 class="feature__title">Shaily(シャイリーダイニング)</h2>
-            <p class="feature__description">Discover a hidden gem that brings together the bold, authentic flavors of Nepal and the vibrant spices of Indo-Chinese cuisine — all under one roof. From aromatic curries and crispy samosas to flavorful fried rice and tender chicken tikka, every dish is crafted with care and tradition.
+            <h2 class="feature__title"
+                data-en="Shaily(シャイリーダイニング)"
+                data-ja="Shaily（シャイリーダイニング）">Shaily(シャイリーダイニング)</h2>
+            <p class="feature__description"
+               data-en="Discover a hidden gem that brings together the bold, authentic flavors of Nepal and the vibrant spices of Indo-Chinese cuisine — all under one roof. From aromatic curries and crispy samosas to flavorful fried rice and tender chicken tikka, every dish is crafted with care and tradition.\n              Whether you’re craving the comforting taste of home or exploring South Asian flavors for the first time, our restaurant offers a truly unique dining experience in Japan — one that surprises and delights with every bite."
+               data-ja="ネパールの力強く本格的な味わいと、インド中華の鮮やかなスパイスを一度に楽しめる隠れた名店です。香り高いカレーやサクサクのサモサ、風味豊かなチャーハン、柔らかなチキンティッカなど、どの料理も伝統と技を大切にして丁寧に作っています。来店はご家庭の懐かしい味を求める方にも、初めて南アジアの味に挑戦する方にも、驚きと喜びをお届けする特別な体験になるでしょう。">Discover a hidden gem that brings together the bold, authentic flavors of Nepal and the vibrant spices of Indo-Chinese cuisine — all under one roof. From aromatic curries and crispy samosas to flavorful fried rice and tender chicken tikka, every dish is crafted with care and tradition.
               <br>
               Whether you’re craving the comforting taste of home or exploring South Asian flavors for the first time, our restaurant offers a truly unique dining experience in Japan — one that surprises and delights with every bite.
             </p>
             <p class="feature__description"><strong>住所: 升本ビル 5F, 7 Chome-6-1 Nishikamata, Ota City, Tokyo 144-0051</strong></p>
             <!-- call button  -->
-            <a href="tel:0366925211" class="visible-button">
+            <a href="tel:0366925211" class="visible-button"
+               data-en='<i class="fas fa-phone"></i> 03-6692-5211'
+               data-ja='<i class="fas fa-phone"></i> 03-6692-5211'>
             <i class="fas fa-phone"></i> 03-6692-5211
             </a>
             <!-- Google Maps Button -->
-            <a href="https://maps.app.goo.gl/8dng3WzrJWczE9Ee8" target="_blank" class="visible-button">
+            <a href="https://maps.app.goo.gl/8dng3WzrJWczE9Ee8" target="_blank" class="visible-button"
+               data-en='<i class="fas fa-map-marker icon-google"></i> Open in Google Maps'
+               data-ja='<i class="fas fa-map-marker icon-google"></i> Googleマップで開く'>
             <i class="fas fa-map-marker icon-google"></i> Open in Google Maps
             </a>
           </div>
@@ -117,7 +143,9 @@
           <!-- <img class="feature__pattern hide-on-mobile" src="/images/patterns/pattern-curve-top-right.svg" alt="" width="895" height="320" /> -->
           <!-- ✅ Horizontal Scroll Section 2 -->
                     <div class="image-scroll-horizontal">
-            <button class="scroll-btn left" onclick="scrollImages(this, 'left')">‹</button>
+            <button class="scroll-btn left" onclick="scrollImages(this, 'left')"
+                    data-en="‹"
+                    data-ja="‹">‹</button>
             <div class="image-row">
               <picture>
                 <source media="(min-width: 1100px)" srcset="/images/homepage/restaurants/shanti-one-desktop@2x.jpg" />
@@ -140,22 +168,31 @@
                 <img class="feature__image has-shadow" src="/images/homepage/restaurants/shanti-four-mobile@2x.jpg" alt="food" />
               </picture>
             </div>
-            <button class="scroll-btn right" onclick="scrollImages(this, 'right')">›</button>
+            <button class="scroll-btn right" onclick="scrollImages(this, 'right')"
+                    data-en="›"
+                    data-ja="›">›</button>
           </div>
           <!-- <img class="feature__lines hide-on-mobile" src="/images/patterns/pattern-lines.svg" alt="" width="160" height="76" /> -->
           <div class="feature__text">
             <img class="feature__divider" src="/images/patterns/pattern-divide.svg" alt="" width="71" height="7" />
-            <h2 class="feature__title">Shanti(シャンティースープカリー)</h2>
-            <p class="feature__description">
-              SHANTi was born in its hometown of Sapporo, Hokkaido, and has been loved by everyone as a popular soup curry restaurant in Harajuku, Shibuya, Ikebukuro, and Takadanobaba.<br>
+            <h2 class="feature__title"
+                data-en="Shanti(シャンティースープカリー)"
+                data-ja="Shanti（シャンティー・スープカリー）">Shanti(シャンティースープカリー)</h2>
+            <p class="feature__description"
+               data-en="SHANTi was born in its hometown of Sapporo, Hokkaido, and has been loved by everyone as a popular soup curry restaurant in Harajuku, Shibuya, Ikebukuro, and Takadanobaba.\n              A soup curry that can't be imitated anywhere else, with a mixture of over 20 types of spices, a healthy soup with a highly medicinal effect, back fat added to give it a rich and rich flavor, and the simmered chicken melts in your mouth. Please try it at your local SHANTi."
+               data-ja="SHANTiは北海道・札幌で生まれ、原宿、渋谷、池袋、高田馬場などで多くの方に愛されてきた人気のスープカレー専門店です。20種類以上のスパイスをブレンドした、ここでしか味わえない深い風味のスープに背脂を加えてコクを出し、じっくり煮込んだチキンは口の中でほろっとほどけます。ぜひお近くのSHANTiでお試しください。">SHANTi was born in its hometown of Sapporo, Hokkaido, and has been loved by everyone as a popular soup curry restaurant in Harajuku, Shibuya, Ikebukuro, and Takadanobaba.<br>
               A soup curry that can't be imitated anywhere else, with a mixture of over 20 types of spices, a healthy soup with a highly medicinal effect, back fat added to give it a rich and rich flavor, and the simmered chicken melts in your mouth. Please try it at your local SHANTi.
             </p>
             <p class="feature__description"><strong>住所: ハクホウ渋谷第１ビル, 地下１階, 2 Chome-7-4 Dogenzaka, Shibuya, Tokyo 150-0043</strong></p>
-            <a href="tel:0364160375" class="visible-button">
+            <a href="tel:0364160375" class="visible-button"
+               data-en='<i class="fas fa-phone"></i> 03-6416-0375'
+               data-ja='<i class="fas fa-phone"></i> 03-6416-0375'>
             <i class="fas fa-phone"></i> 03-6416-0375
             </a>
             <!-- Google Maps Button -->
-            <a href="https://maps.app.goo.gl/UtTxRaKj2EnJ4BA77" target="_blank" class="visible-button">
+            <a href="https://maps.app.goo.gl/UtTxRaKj2EnJ4BA77" target="_blank" class="visible-button"
+               data-en='<i class="fas fa-map-marker icon-google"></i> Open in Google Maps'
+               data-ja='<i class="fas fa-map-marker icon-google"></i> Googleマップで開く'>
             <i class="fas fa-map-marker icon-google"></i> Open in Google Maps
             </a>
           </div>
@@ -166,8 +203,9 @@
         <div class="highlights__content">
           <div class="highlights__text">
             <img class="highlights__divider" src="/images/patterns/pattern-divide.svg" alt="" width="71" height="7" />
-            <h2>A few highlights from our menu</h2>
-            <p>From comforting curries to flavorful dumplings, each dish is made with care using fresh, seasonal ingredients. We cater to all dietary preferences and here's some of our customers favorites. </p>
+            <h2 data-en="A few highlights from our menu" data-ja="おすすめメニューの一部">A few highlights from our menu</h2>
+            <p data-en="From comforting curries to flavorful dumplings, each dish is made with care using fresh, seasonal ingredients. We cater to all dietary preferences and here's some of our customers favorites."
+               data-ja="心がほっとするカレーから風味豊かな餃子まで、すべての料理は新鮮な季節の食材を使い、丁寧に仕上げています。お好みや食事制限にも対応しており、お客様に人気のメニューの一部をご紹介します。">From comforting curries to flavorful dumplings, each dish is made with care using fresh, seasonal ingredients. We cater to all dietary preferences and here's some of our customers favorites. </p>
           </div>
           <div class="highlights__items">
             <div class="highlights__item">
@@ -176,8 +214,10 @@
                 <img src="/images/homepage/khana-mobile@2x.jpg" alt="food" width="654" height="490" />
               </picture>
               <div class="highlights__item-divider hide-on-mobile"></div>
-              <h3>Nepali Thali Set </h3>
-              <p class="small">Centered with fluffy steamed rice, it’s accompanied by creamy black lentil soup (dal), spiced meat curry, sautéed seasonal greens, tangy pickles, and a crisp papad for added crunch.</p>
+              <h3 data-en="Nepali Thali Set" data-ja="ネパール・ターリーセット">Nepali Thali Set </h3>
+              <p class="small"
+                 data-en="Centered with fluffy steamed rice, it’s accompanied by creamy black lentil soup (dal), spiced meat curry, sautéed seasonal greens, tangy pickles, and a crisp papad for added crunch."
+                 data-ja="ふっくら炊いたご飯を中心に、クリーミーな黒レンズ豆のダル、スパイスの効いた肉のカレー、季節野菜のソテー、さっぱりしたピクルス、そして香ばしいパパドが付いた定番セットです。">Centered with fluffy steamed rice, it’s accompanied by creamy black lentil soup (dal), spiced meat curry, sautéed seasonal greens, tangy pickles, and a crisp papad for added crunch.</p>
             </div>
             <div class="highlights__item">
               <picture class="highlights__item-image">
@@ -185,8 +225,10 @@
                 <img src="/images/homepage/momo-mobile@2x.jpg" alt="khana" width="654" height="490" />
               </picture>
               <div class="highlights__item-divider hide-on-mobile"></div>
-              <h3>Momo</h3>
-              <p class="small">Served with a rich, spicy dipping sauce, these bite-sized delights are perfect for savoring authentic Himalayan flavors.</p>
+              <h3 data-en="Momo" data-ja="モモ">Momo</h3>
+              <p class="small"
+                 data-en="Served with a rich, spicy dipping sauce, these bite-sized delights are perfect for savoring authentic Himalayan flavors."
+                 data-ja="コクのあるスパイシーなディップソースと一緒に提供する、小ぶりでジューシーなヒマラヤの伝統的な蒸し餃子です。">Served with a rich, spicy dipping sauce, these bite-sized delights are perfect for savoring authentic Himalayan flavors.</p>
             </div>
             <div class="highlights__item">
               <picture class="highlights__item-image">
@@ -194,8 +236,10 @@
                 <img src="/images/homepage/special-mobile@2x.jpg" alt="khana" width="654" height="490" />
               </picture>
               <div class="highlights__item-divider hide-on-mobile"></div>
-              <h3>Mandala Special Curry</h3>
-              <p class="small">A rich and aromatic curry with tender meat, fresh vegetables, and bold spices, offering warmth and comfort in every bite.</p>
+              <h3 data-en="Mandala Special Curry" data-ja="マンダラ・スペシャルカレー">Mandala Special Curry</h3>
+              <p class="small"
+                 data-en="A rich and aromatic curry with tender meat, fresh vegetables, and bold spices, offering warmth and comfort in every bite."
+                 data-ja="柔らかいお肉と新鮮な野菜、力強いスパイスが調和した、深い香りとコクのある一皿です。食べるたびに温かさと満足感を感じられます。">A rich and aromatic curry with tender meat, fresh vegetables, and bold spices, offering warmth and comfort in every bite.</p>
             </div>
             <div class="highlights__item">
               <picture class="highlights__item-image">
@@ -203,19 +247,25 @@
                 <img src="/images/homepage/chicken-mobile@2x.jpg" alt="khana" width="654" height="490" />
               </picture>
               <div class="highlights__item-divider hide-on-mobile"></div>
-              <h3>Chicken & Vegetable Soup Curry </h3>
-              <p class="small">Featuring a tender chicken leg simmered to perfection, assorted fresh vegetables like lotus root, baby corn, and eggplant, all bathed in a savory, mildly spicy broth.</p>
+              <h3 data-en="Chicken & Vegetable Soup Curry" data-ja="チキンと野菜のスープカレー">Chicken & Vegetable Soup Curry </h3>
+              <p class="small"
+                 data-en="Featuring a tender chicken leg simmered to perfection, assorted fresh vegetables like lotus root, baby corn, and eggplant, all bathed in a savory, mildly spicy broth."
+                 data-ja="やわらかく煮込んだチキンレッグと、レンコンやベビーコーン、ナスなどの新鮮な野菜を、程よい辛さのコク深いスープで仕上げた一品です。">Featuring a tender chicken leg simmered to perfection, assorted fresh vegetables like lotus root, baby corn, and eggplant, all bathed in a savory, mildly spicy broth.</p>
             </div>
           </div>
         </div>
       </section>
       <section class="wrapper booking">
-        <h2 class="visually-hidden">Booking</h2>
+        <h2 class="visually-hidden" data-en="Booking" data-ja="予約">Booking</h2>
         <img class="booking__pattern hide-on-mobile" src="/images/patterns/pattern-curve-top-right.svg" alt="" width="895" height="320" />
-        <div class="booking__tabs fullbleed" role="tablist" aria-label="Sample Tabs">
-          <button class="booking__tab" role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">Family Gathering</button>
-          <button class="booking__tab" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">Special Events</button>
-          <button class="booking__tab" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">Social Events</button>
+        <div class="booking__tabs fullbleed" role="tablist" aria-label="Sample Tabs"
+             data-aria-en="Sample Tabs" data-aria-ja="タブ">
+          <button class="booking__tab" role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"
+                  data-en="Family Gathering" data-ja="家族での集まり">Family Gathering</button>
+          <button class="booking__tab" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1"
+                  data-en="Special Events" data-ja="特別なイベント">Special Events</button>
+          <button class="booking__tab" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1"
+                  data-en="Social Events" data-ja="交流イベント">Social Events</button>
         </div>
         <div class="booking__tabpanel" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
           <div class="booking__tabcontent">
@@ -225,9 +275,11 @@
               <img class="booking__image has-shadow" src="/images/homepage/events/family-gathering-mobile@2x.jpg" alt="intro" width="652" height="800" />
             </picture>
             <div class="booking__text">
-              <h3>Family Gathering</h3>
-              <p>Whether you're celebrating a special occasion or simply enjoying time with your loved ones, our space is perfect for families of all sizes. Let us take care of the food and atmosphere—so you can focus on making memories together.</p>
-              <a href="tel: 08074309270" class="button solid">Book a table</a>
+              <h3 data-en="Family Gathering" data-ja="家族での集まり">Family Gathering</h3>
+              <p data-en="Whether you're celebrating a special occasion or simply enjoying time with your loved ones, our space is perfect for families of all sizes. Let us take care of the food and atmosphere—so you can focus on making memories together."
+                 data-ja="記念日などのお祝いでも、普段の家族の時間でも、当店の空間はあらゆるご家族に適しています。料理や雰囲気は私たちにお任せいただき、思い出作りに集中してください。">Whether you're celebrating a special occasion or simply enjoying time with your loved ones, our space is perfect for families of all sizes. Let us take care of the food and atmosphere—so you can focus on making memories together.</p>
+              <a href="tel: 08074309270" class="button solid"
+                 data-en="Book a table" data-ja="予約する">Book a table</a>
             </div>
           </div>
         </div>
@@ -239,9 +291,11 @@
               <img class="booking__image has-shadow" src="/images/homepage/events/special-events-mobile@2x.jpg" alt="intro" width="652" height="800" />
             </picture>
             <div class="booking__text">
-              <h3>Special Events</h3>
-              <p>Whether you're celebrating a birthday, anniversary, graduation, or any other milestone, we're here to make it extra special. Enjoy a delicious meal in a warm and welcoming atmosphere—because every celebration deserves to be unforgettable.</p>
-              <a href="tel: 08074309270" class="button solid">Book a table</a>
+              <h3 data-en="Special Events" data-ja="特別イベント">Special Events</h3>
+              <p data-en="Whether you're celebrating a birthday, anniversary, graduation, or any other milestone, we're here to make it extra special. Enjoy a delicious meal in a warm and welcoming atmosphere—because every celebration deserves to be unforgettable."
+                 data-ja="誕生日や記念日、卒業などの節目をより特別にするお手伝いをいたします。温かく居心地の良い空間で美味しい料理を楽しみ、忘れられない時間をお過ごしください。">Whether you're celebrating a birthday, anniversary, graduation, or any other milestone, we're here to make it extra special. Enjoy a delicious meal in a warm and welcoming atmosphere—because every celebration deserves to be unforgettable.</p>
+              <a href="tel: 08074309270" class="button solid"
+                 data-en="Book a table" data-ja="予約する">Book a table</a>
             </div>
           </div>
         </div>
@@ -253,9 +307,11 @@
               <img class="booking__image has-shadow" src="/images/homepage/events/social-events-mobile@2x.jpg" alt="picture" width="652" height="800" />
             </picture>
             <div class="booking__text">
-              <h3>Social Events</h3>
-              <p>From birthdays and anniversaries to casual get-togethers and social events, we’re here to make every gathering feel special. Let us take care of the food and atmosphere while you enjoy meaningful moments with the people who matter most.</p>
-              <a href="tel: 08074309270" class="button solid">Book a table</a>
+              <h3 data-en="Social Events" data-ja="交流イベント">Social Events</h3>
+              <p data-en="From birthdays and anniversaries to casual get-togethers and social events, we’re here to make every gathering feel special. Let us take care of the food and atmosphere while you enjoy meaningful moments with the people who matter most."
+                 data-ja="誕生日や記念日からカジュアルな集まりまで、どんな会でも特別に感じられるようサポートします。料理や雰囲気は私たちにお任せいただき、大切な方との時間をお楽しみください。">From birthdays and anniversaries to casual get-togethers and social events, we’re here to make every gathering feel special. Let us take care of the food and atmosphere while you enjoy meaningful moments with the people who matter most.</p>
+              <a href="tel: 08074309270" class="button solid"
+                 data-en="Book a table" data-ja="予約する">Book a table</a>
             </div>
           </div>
         </div>
@@ -268,90 +324,41 @@
           <img class="cta__image" src="/images/homepage/ready-bg-mobile@2x.jpg" alt="" width="750" height="656" />
         </picture>
         <div class="cta__text">
-          <h2 class="bordered_text">Ready to make a reservation?</h2>
-          <a href="tel: 08074309270" class="button solid">
+          <h2 class="bordered_text"
+              data-en="Ready to make a reservation?"
+              data-ja="ご予約はこちら">Ready to make a reservation?</h2>
+          <a href="tel: 08074309270" class="button solid"
+             data-en='<i class="fas fa-phone"></i> Contact Us'
+             data-ja='<i class="fas fa-phone"></i> お問い合わせ'>
           <i class="fas fa-phone"></i>
           Contact Us</a>
         </div>
       </section>
     </main>
     <footer class="wrapper footer bg-dark">
-      <h2 class="visually-hidden">Footer</h2>
+      <h2 class="visually-hidden" data-en="Footer" data-ja="フッター">Footer</h2>
       <div class="footer__content">
         <a class="footer__link" href="/">
         <img class="logo" src="/images/logo.svg" alt="shaily-logo" width="103" height="40" />
         </a>
         <div class="footer__location">
-          <p class="footer-title">Shaily Dining (Kamata)</p>
-          <a href="tel:0366925211">03-6692-5211</a></br>
-            <p class="footer-title">Open Times Mon - Sun:</p>
-          <p> Lunch: 11:00 AM - 15:00 PM</p>
-          <p> Dinner: 17:00 AM - 22:00 PM</p>
+          <p class="footer-title" data-en="Shaily Dining (Kamata)" data-ja="Shaily Dining（蒲田）">Shaily Dining (Kamata)</p>
+            <div class="footer-align">
+          <a href="tel:0366925211">03-6692-5211</a>
+            </div>
+            <p class="footer-title" data-en="Open Times Mon - Sun:" data-ja="営業時間（月〜日）">Open Times Mon - Sun:</p>
+          <p data-en="Lunch: 11:00 AM - 15:00 PM" data-ja="ランチ: 11:00 - 15:00"> Lunch: 11:00 AM - 15:00</p>
+          <p data-en="Dinner: 17:00 AM - 22:00 PM" data-ja="ディナー: 17:00 - 22:00"> Dinner: 17:00 AM - 22:00</p>
         </div>
         <div class="footer__times">
-            <p class="footer-title">Shanti Soup Curry (Shibuya)</p>
+            <p class="footer-title" data-en="Shanti Soup Curry (Shibuya)" data-ja="Shanti スープカリー（渋谷）">Shanti Soup Curry (Shibuya)</p>
+            <div class="footer-align">
           <a href="tel:0364160375">03-6416-0375</a>
-            <p class="footer-title">Open Times Mon - Sun:</p>
-          <p> 11:00 AM - 11:00 PM</p>
+          </div>
+            <p class="footer-title" data-en="Open Times Mon - Sun:" data-ja="営業時間（月〜日）">Open Times Mon - Sun:</p>
+          <p data-en="11:00 AM - 11:00 PM" data-ja="11:00 - 23:00"> 11:00 AM - 11:00 PM</p>
         </div>
       </div>
     </footer>
   </body>
 </html>
-<!----------PRODUCT HTML STARTS----->
-<!-- <div class="container">
-  <h2 class="heading">Most Ordered <span>Food Menu</span></h2>
-  <p class="subhead">Top Picks from Our Customers..</p>
-
-  <div class="products">
-        <div class="pro"> <img src="images/p-1.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-2.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-3.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-4.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-5.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-6.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-7.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-8.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-9.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-10.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-11.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-        <div class="pro"> <img src="images/p-12.jpg" class="w-100">
-      <h6>Product Name Here</h6>
-      <p><b>$19.99</b> <strike>$10.99</strike> </p>
-      <a href="#">Order Now</a> </div>
-      </div>
-  </div> -->
-<!----------PRODUCT HTML ENDS----->

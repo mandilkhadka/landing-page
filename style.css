@@ -907,6 +907,9 @@
 .footer-title {
   font-weight: 700;
 }
+.footer-align {
+  text-align: center;
+}
 
 
       .bordered_text {
@@ -1007,58 +1010,30 @@
   }
 }
 
-/**********START PRODUCT SECTION**********/
-/* .heading {
-    text-align: center;
-    font-size:32px;
-    padding: 0px;
-    margin: 80px 0px 0px 0px;
+/* Language Toggle Button */
+/* Language Toggle Button */
+#lang-toggle {
+  position: fixed;
+  top: 20px;
+  right: 28px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1.8px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
-.heading span {
-    color: #F9A825;
+
+#lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  border-color: transparent;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.subhead {
-    text-align: center;
-    font-size: 18px;
-    padding: 0px;
-    margin: 5px 0px 40px 0px;
-}
-.products {
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	display: grid;
-	gap: 15px;
-	margin:0px 0px 80px 0px;
-}
-.pro {
-    border: 1px solid #fc9800;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 5px 20px 5px;
-	text-align:center
-}
-.pro h6 {
-    font-size: 20px;
-    margin: 20px 0px 5px 0px;
-}
-.pro b {
-    font-size: 26px;
-    margin-right: 5px;
-    color: red;
-}
-.pro strike {
-    font-size:16px;
-}
-.pro a {
-    text-align: center;
-    background: #fc9800;
-    color: white;
-    padding: 10px 12px;
-    border-radius: 25px;
-    font-size: 16px;
-	width:200px;
-	margin:0px auto;
-    margin-top: 20px;
-} */
-/**********END PRODUCT SECTION**********/
